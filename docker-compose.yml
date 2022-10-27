@@ -2,7 +2,8 @@ version: '3.2'
 services:
   bd:
     container_name: basededatos-tlc
-    image: postgis/postgis:14-3.3
+    # image: postgis/postgis:14-3.3
+    image: tobi312/rpi-postgresql-postgis:13-3.1-alpine
     restart: unless-stopped
     volumes:
       - ./basededatos:/var/lib/postgresql/data
