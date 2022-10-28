@@ -7,6 +7,8 @@
 
 Administrador de contenido para el proyecto Tipo, lito, :skull:
 
+_el código del sitio web está [aquí](https://github.com/enflujo/enflujo-tipo-lito-calavera)_
+
 Creado con la versión open-source de [Directus](https://directus.io/).
 
 Este repositorio solamente tiene los archivos de configuración para crear una instancia de Directus con una base de datos vacía. Acá no se van a exponer los datos ni la configuración de las colecciones del CMS. En ese sentido, es un esqueleto que sirve para crear cualquier proyecto similar desde cero.
