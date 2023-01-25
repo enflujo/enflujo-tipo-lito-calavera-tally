@@ -8,9 +8,11 @@
   "scripts": {
     "lint": "prettier --check .",
     "lint:fix": "prettier --write --list-different .",
-    "extensiones": "copyfiles -f ./node_modules/directus-extension-wpslug-interface/dist/index.js ./extensions/interfaces/slugs"
+    "extensiones": "copyfiles -f ./node_modules/directus-extension-wpslug-interface/dist/index.js ./extensions/interfaces/slugs",
+    "diagrama": "mmdc -i diagrama.mmd -o diagrama.png"
   },
   "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^9.3.0",
     "copyfiles": "^2.4.1",
     "directus-extension-wpslug-interface": "^1.1.0",
     "prettier": "^2.7.1"

@@ -68,3 +68,71 @@ yarn extensiones
 ```
 
 Esto básicamente copia la extensión desde la carpeta `node_modules` donde esta instalada con NPM y la pasa a la carpeta `/extensions`. Directus revisa los archivos en la carpeta `/extensions` al iniciar los contenedores y las carga en la interfaz.
+
+## Diagrama de la estructura del sitio web
+
+```mermaid
+classDiagram
+
+Home <|-- Imágenes
+Hilos <|-- Imágenes
+Programación Creativa <|-- Imágenes
+Créditos <|-- Imágenes
+Mesa Expandida <|-- Imágenes
+Home --o Hilos
+Home --o Programación Creativa
+Home --o Créditos
+Home --o Mesa Expandida
+
+Home : html | index.html
+Home : css | estilos.min.css
+Home : JS | scripts.js
+
+Hilos : html | index.html
+Hilos : css | estilos.min.css
+Hilos : JS | scripts.js
+
+Programación Creativa : html | index.html
+Programación Creativa : css | estilos.min.css
+Programación Creativa : JS | scripts.js
+
+Créditos : html | index.html
+Créditos : css | estilos.min.css
+Créditos : JS | scripts.js
+
+Mesa Expandida : html | index.html
+Mesa Expandida : css | estilos.min.css
+Mesa Expandida : JS | scripts.js
+
+Imágenes : archivos .png, .jpg y .svg
+```
+
+- tipo-lito-calavera/
+  - imagenes/
+  - index.html (home)
+  - estilos.scss (documentada)
+  - estilos.min.css (pública)
+    - hilo1/
+      - index.html
+      - estilos.scss (documentada)
+      - estilos.min.css (pública)
+      - scripts.js (documentada)
+      - scripts.min.js (pública)
+    - hilo2
+      - Se repite la misma estructura en todos los hilos, referirse a "hilo1"
+  - creditos/
+    - index.html
+  - programacion-creativa/
+    - index.thml (introdución y galería de ejercicios)
+    - ejercicio1/
+      - index.html
+      - estilos.scss (documentada)
+      - estilos.min.css (pública)
+      - scripts.js (documentada)
+      - scripts.min.js (pública)
+  - mesa-expandida/
+    - index.html
+    - estilos.scss (documentada)
+    - estilos.min.css (pública)
+    - scripts.js (documentada)
+    - scripts.min.js (pública)
